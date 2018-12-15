@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Button, Navbar, Nav, NavItem} from 'react-bootstrap'
+import {Navbar} from 'react-bootstrap'
 import ShowProblem from './ShowProblem'
 import {Listen} from './utils'
 import './App.css';
@@ -8,12 +8,13 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      number: 2
+      number: 2,
+      solution: "?"
     }
   }
 
   componentDidMount() {
-    Listen()
+    Listen(this.setState.bind(this), this.state.solution)
   }
 
   updateCounter(){
@@ -23,11 +24,11 @@ class App extends Component {
   render() {
     return (
       <div className="App text-center">
-        <Navbar bpStyle="text-center" className="text-center">
-          <div className="title" bpStyle="text-center" href="#home">MathPlay</div>
+        <Navbar className="text-center">
+          <div className="title" href="#home">MathPlay</div>
         </Navbar>
         <div className="math-container">
-          < ShowProblem number={this.state.number}/>
+          < ShowProblem solution={this.state.solution} number={this.state.number}/>
         </div>
       </div>
     );

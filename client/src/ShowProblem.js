@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
 
 
-const ShowProblem = ({number}) => {
+const ShowProblem = ({number, solution}) => {
   return (
-    <div className="show-number-container">
-      <div className="problem">{number}</div>
-      <div className="problem">+</div>
-      <div className="problem">{number}</div>
-      <div className="problem">=</div>
-      <div className="solution">?</div>
-   </div>
+    <div className="big-container">
+      <div className="inner-container">
+        <div className="numbers">{number}</div>
+        <div className="numbers">+</div>
+        <div className="numbers">{number}</div>
+        <div className="numbers">=</div>
+      </div>
+      <div className="solution">{solution}</div>
+    </div>
   )
 }
 

@@ -27,18 +27,27 @@
   width: 100%;
 }
 
-.show-number-container {
+.big-container {
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-  width: 125px;
+  justify-content: center;
 }
 
-.problem {
+.inner-container {
+  display: flex;
+  justify-content: space-between;
+  width: 8%;
+}
+
+.numbers {
   font-size: 25px;
   color: white;
+  font-weight: bold;
 }
 
 .solution {
   font-size: 25px;
   color: white;
+  font-weight: bold;
+  margin-left: 8px;
 }

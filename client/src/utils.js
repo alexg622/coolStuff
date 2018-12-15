@@ -1,6 +1,6 @@
 export const Listen = () => {
   document.addEventListener("keydown", (e) => {
-    console.log(e.keyCode);
+    // 13
     let solutionDiv = document.querySelector(".solution")
     if (solutionDiv.textContent === "?") solutionDiv.textContent = ""
     switch(e.keyCode) {
@@ -36,6 +36,7 @@ export const Listen = () => {
         break;
       case 8:
         solutionDiv.textContent = solutionDiv.textContent.substr(0, solutionDiv.textContent.length-1)
+        if (solutionDiv.textContent === "") solutionDiv.textContent = "?"
         break;
     }
   })
