@@ -1,4 +1,4 @@
-export const Listen = () => {
+export const Listen = (handleSubmit) => {
   document.addEventListener("keydown", (e) => {
     // 13
     let solutionDiv = document.querySelector(".solution")
@@ -37,6 +37,9 @@ export const Listen = () => {
       case 8:
         solutionDiv.textContent = solutionDiv.textContent.substr(0, solutionDiv.textContent.length-1)
         if (solutionDiv.textContent === "") solutionDiv.textContent = "?"
+        break;
+      case 13:
+        handleSubmit(solutionDiv)
         break;
     }
   })

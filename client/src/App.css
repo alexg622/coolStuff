@@ -36,13 +36,13 @@
 .inner-container {
   display: flex;
   justify-content: space-between;
-  width: 8%;
 }
 
 .numbers {
   font-size: 25px;
   color: white;
   font-weight: bold;
+  margin-left: 8px;
 }
 
 .solution {
@@ -50,4 +50,10 @@
   color: white;
   font-weight: bold;
   margin-left: 8px;
+}
+
+.points {
+  font-size: 25px;
+  color: white;
+  font-weight: bold;
 }
